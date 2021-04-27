@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "D:/books/darsi/7/az_cad/proj/main/top_module_tb_isim_beh.exe" -prj "D:/books/darsi/7/az_cad/proj/main/top_module_tb_beh.prj" "work.top_module_tb" 

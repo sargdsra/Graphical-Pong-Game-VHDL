@@ -1,0 +1,13 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Sat Oct 20 10:25:20 2018
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "i_CLK" LOCATE = SITE "P184" LEVEL 1;
+COMP "o_LED<0>" LOCATE = SITE "P42" LEVEL 1;
+COMP "o_LED<1>" LOCATE = SITE "P43" LEVEL 1;
+COMP "o_LED<2>" LOCATE = SITE "P44" LEVEL 1;
+COMP "o_LED<3>" LOCATE = SITE "P45" LEVEL 1;
+COMP "i_RST" LOCATE = SITE "P72" LEVEL 1;
+SCHEMATIC END;
+

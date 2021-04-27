@@ -1,0 +1,19 @@
+V3 15
+FL D:/books/darsi/7/az_cad/proj/main/counter.vhd 2018/10/13.10:29:55 P.20131013
+EN work/counter 1540018508 FL D:/books/darsi/7/az_cad/proj/main/counter.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/counter/Behavioral 1540018509 \
+      FL D:/books/darsi/7/az_cad/proj/main/counter.vhd EN work/counter 1540018508
+FL D:/books/darsi/7/az_cad/proj/main/my_dcm.vhd 2018/09/29.15:11:33 P.20131013
+EN work/my_dcm 1540018506 FL D:/books/darsi/7/az_cad/proj/main/my_dcm.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 LB UNISIM \
+      PH unisim/VCOMPONENTS 1381692182
+AR work/my_dcm/BEHAVIORAL 1540018507 \
+      FL D:/books/darsi/7/az_cad/proj/main/my_dcm.vhd EN work/my_dcm 1540018506 \
+      CP BUFG CP IBUFG CP DCM
+FL D:/books/darsi/7/az_cad/proj/main/top_module.vhd 2018/10/20.10:24:50 P.20131013
+EN work/top_module 1540018510 FL D:/books/darsi/7/az_cad/proj/main/top_module.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/top_module/Behavioral 1540018511 \
+      FL D:/books/darsi/7/az_cad/proj/main/top_module.vhd EN work/top_module 1540018510 \
+      CP my_dcm CP counter

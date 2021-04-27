@@ -1,0 +1,449 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Reading design: top_module.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "top_module.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "top_module"
+Output Format                      : NGC
+Target Device                      : xc3s400-4-pq208
+
+---- Source Options
+Top Module Name                    : top_module
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "D:/books/darsi/7/az_cad/proj/main/my_dcm.vhd" in Library work.
+Architecture behavioral of Entity my_dcm is up to date.
+Compiling vhdl file "D:/books/darsi/7/az_cad/proj/main/counter.vhd" in Library work.
+Architecture behavioral of Entity counter is up to date.
+Compiling vhdl file "D:/books/darsi/7/az_cad/proj/main/top_module.vhd" in Library work.
+Entity <top_module> compiled.
+Entity <top_module> (Architecture <behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <top_module> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <my_dcm> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <counter> in library <work> (architecture <behavioral>) with generics.
+	bound_counter = 80000000
+
+Analyzing hierarchy for entity <counter> in library <work> (architecture <behavioral>) with generics.
+	bound_counter = 128000000
+
+Analyzing hierarchy for entity <counter> in library <work> (architecture <behavioral>) with generics.
+	bound_counter = 104000000
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <top_module> in library <work> (Architecture <behavioral>).
+WARNING:Xst:753 - "D:/books/darsi/7/az_cad/proj/main/top_module.vhd" line 62: Unconnected output port 'CLKIN_IBUFG_OUT' of component 'my_dcm'.
+Entity <top_module> analyzed. Unit <top_module> generated.
+
+Analyzing Entity <my_dcm> in library <work> (Architecture <behavioral>).
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <CLKIN_IBUFG_INST> in unit <my_dcm>.
+    Set user-defined property "IBUF_DELAY_VALUE =  0" for instance <CLKIN_IBUFG_INST> in unit <my_dcm>.
+    Set user-defined property "IBUF_LOW_PWR =  TRUE" for instance <CLKIN_IBUFG_INST> in unit <my_dcm>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <CLKIN_IBUFG_INST> in unit <my_dcm>.
+    Set user-defined property "CLKDV_DIVIDE =  2.0000000000000000" for instance <DCM_INST> in unit <my_dcm>.
+    Set user-defined property "CLKFX_DIVIDE =  8" for instance <DCM_INST> in unit <my_dcm>.
+    Set user-defined property "CLKFX_MULTIPLY =  13" for instance <DCM_INST> in unit <my_dcm>.
+    Set user-defined property "CLKIN_DIVIDE_BY_2 =  FALSE" for instance <DCM_INST> in unit <my_dcm>.
+    Set user-defined property "CLKIN_PERIOD =  25.0000000000000000" for instance <DCM_INST> in unit <my_dcm>.
+    Set user-defined property "CLKOUT_PHASE_SHIFT =  NONE" for instance <DCM_INST> in unit <my_dcm>.
+    Set user-defined property "CLK_FEEDBACK =  1X" for instance <DCM_INST> in unit <my_dcm>.
+    Set user-defined property "DESKEW_ADJUST =  SYSTEM_SYNCHRONOUS" for instance <DCM_INST> in unit <my_dcm>.
+    Set user-defined property "DFS_FREQUENCY_MODE =  LOW" for instance <DCM_INST> in unit <my_dcm>.
+    Set user-defined property "DLL_FREQUENCY_MODE =  LOW" for instance <DCM_INST> in unit <my_dcm>.
+    Set user-defined property "DSS_MODE =  NONE" for instance <DCM_INST> in unit <my_dcm>.
+    Set user-defined property "DUTY_CYCLE_CORRECTION =  TRUE" for instance <DCM_INST> in unit <my_dcm>.
+    Set user-defined property "FACTORY_JF =  8080" for instance <DCM_INST> in unit <my_dcm>.
+    Set user-defined property "PHASE_SHIFT =  0" for instance <DCM_INST> in unit <my_dcm>.
+    Set user-defined property "SIM_MODE =  SAFE" for instance <DCM_INST> in unit <my_dcm>.
+    Set user-defined property "STARTUP_WAIT =  FALSE" for instance <DCM_INST> in unit <my_dcm>.
+Entity <my_dcm> analyzed. Unit <my_dcm> generated.
+
+Analyzing generic Entity <counter.1> in library <work> (Architecture <behavioral>).
+	bound_counter = 80000000
+Entity <counter.1> analyzed. Unit <counter.1> generated.
+
+Analyzing generic Entity <counter.2> in library <work> (Architecture <behavioral>).
+	bound_counter = 128000000
+Entity <counter.2> analyzed. Unit <counter.2> generated.
+
+Analyzing generic Entity <counter.3> in library <work> (Architecture <behavioral>).
+	bound_counter = 104000000
+Entity <counter.3> analyzed. Unit <counter.3> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <counter_1>.
+    Related source file is "D:/books/darsi/7/az_cad/proj/main/counter.vhd".
+    Found 1-bit register for signal <o_f>.
+    Found 27-bit up counter for signal <counter>.
+    Found 27-bit comparator greatequal for signal <o_f$cmp_ge0000> created at line 53.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <counter_1> synthesized.
+
+
+Synthesizing Unit <counter_2>.
+    Related source file is "D:/books/darsi/7/az_cad/proj/main/counter.vhd".
+    Found 1-bit register for signal <o_f>.
+    Found 27-bit up counter for signal <counter>.
+    Found 27-bit comparator greatequal for signal <o_f$cmp_ge0000> created at line 53.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <counter_2> synthesized.
+
+
+Synthesizing Unit <counter_3>.
+    Related source file is "D:/books/darsi/7/az_cad/proj/main/counter.vhd".
+    Found 1-bit register for signal <o_f>.
+    Found 27-bit up counter for signal <counter>.
+    Found 27-bit comparator greatequal for signal <o_f$cmp_ge0000> created at line 53.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <counter_3> synthesized.
+
+
+Synthesizing Unit <my_dcm>.
+    Related source file is "D:/books/darsi/7/az_cad/proj/main/my_dcm.vhd".
+Unit <my_dcm> synthesized.
+
+
+Synthesizing Unit <top_module>.
+    Related source file is "D:/books/darsi/7/az_cad/proj/main/top_module.vhd".
+Unit <top_module> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 4
+ 27-bit up counter                                     : 4
+# Registers                                            : 4
+ 1-bit register                                        : 4
+# Comparators                                          : 4
+ 27-bit comparator greatequal                          : 4
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 4
+ 27-bit up counter                                     : 4
+# Registers                                            : 4
+ Flip-Flops                                            : 4
+# Comparators                                          : 4
+ 27-bit comparator greatequal                          : 4
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <top_module> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block top_module, actual ratio is 2.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 112
+ Flip-Flops                                            : 112
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : top_module.ngr
+Top Level Output File Name         : top_module
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 6
+
+Cell Usage :
+# BELS                             : 470
+#      GND                         : 1
+#      INV                         : 20
+#      LUT1                        : 118
+#      LUT2                        : 12
+#      LUT3                        : 8
+#      LUT4                        : 26
+#      MUXCY                       : 176
+#      VCC                         : 1
+#      XORCY                       : 108
+# FlipFlops/Latches                : 112
+#      FDR                         : 112
+# Clock Buffers                    : 3
+#      BUFG                        : 3
+# IO Buffers                       : 6
+#      IBUF                        : 1
+#      IBUFG                       : 1
+#      OBUF                        : 4
+# DCMs                             : 1
+#      DCM                         : 1
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s400pq208-4 
+
+ Number of Slices:                      101  out of   3584     2%  
+ Number of Slice Flip Flops:            112  out of   7168     1%  
+ Number of 4 input LUTs:                184  out of   7168     2%  
+ Number of IOs:                           6
+ Number of bonded IOBs:                   6  out of    141     4%  
+ Number of GCLKs:                         3  out of      8    37%  
+ Number of DCMs:                          1  out of      4    25%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+---------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)     | Load  |
+-----------------------------------+---------------------------+-------+
+i_CLK                              | Inst_my_dcm/DCM_INST:CLKDV| 56    |
+i_CLK                              | Inst_my_dcm/DCM_INST:CLK0 | 28    |
+i_CLK                              | Inst_my_dcm/DCM_INST:CLKFX| 28    |
+-----------------------------------+---------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 11.601ns (Maximum Frequency: 86.200MHz)
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: 7.165ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'i_CLK'
+  Clock period: 11.601ns (frequency: 86.200MHz)
+  Total number of paths / destination ports: 4498 / 220
+-------------------------------------------------------------------------
+Delay:               7.139ns (Levels of Logic = 14)
+  Source:            Inst_counter3/counter_8 (FF)
+  Destination:       Inst_counter3/o_f (FF)
+  Source Clock:      i_CLK rising 1.6X
+  Destination Clock: i_CLK rising 1.6X
+
+  Data Path: Inst_counter3/counter_8 to Inst_counter3/o_f
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              3   0.720   1.246  Inst_counter3/counter_8 (Inst_counter3/counter_8)
+     LUT1:I0->O            1   0.551   0.000  Inst_counter3/Mcompar_o_f_cmp_ge0000_cy<0>_rt (Inst_counter3/Mcompar_o_f_cmp_ge0000_cy<0>_rt)
+     MUXCY:S->O            1   0.500   0.000  Inst_counter3/Mcompar_o_f_cmp_ge0000_cy<0> (Inst_counter3/Mcompar_o_f_cmp_ge0000_cy<0>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_counter3/Mcompar_o_f_cmp_ge0000_cy<1> (Inst_counter3/Mcompar_o_f_cmp_ge0000_cy<1>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_counter3/Mcompar_o_f_cmp_ge0000_cy<2> (Inst_counter3/Mcompar_o_f_cmp_ge0000_cy<2>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_counter3/Mcompar_o_f_cmp_ge0000_cy<3> (Inst_counter3/Mcompar_o_f_cmp_ge0000_cy<3>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_counter3/Mcompar_o_f_cmp_ge0000_cy<4> (Inst_counter3/Mcompar_o_f_cmp_ge0000_cy<4>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_counter3/Mcompar_o_f_cmp_ge0000_cy<5> (Inst_counter3/Mcompar_o_f_cmp_ge0000_cy<5>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_counter3/Mcompar_o_f_cmp_ge0000_cy<6> (Inst_counter3/Mcompar_o_f_cmp_ge0000_cy<6>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_counter3/Mcompar_o_f_cmp_ge0000_cy<7> (Inst_counter3/Mcompar_o_f_cmp_ge0000_cy<7>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_counter3/Mcompar_o_f_cmp_ge0000_cy<8> (Inst_counter3/Mcompar_o_f_cmp_ge0000_cy<8>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_counter3/Mcompar_o_f_cmp_ge0000_cy<9> (Inst_counter3/Mcompar_o_f_cmp_ge0000_cy<9>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_counter3/Mcompar_o_f_cmp_ge0000_cy<10> (Inst_counter3/Mcompar_o_f_cmp_ge0000_cy<10>)
+     MUXCY:CI->O           1   0.303   0.801  Inst_counter3/Mcompar_o_f_cmp_ge0000_cy<11> (Inst_counter3/o_f_cmp_ge0000)
+     INV:I->O              1   0.551   0.801  Inst_counter3/o_f_not00011_INV_0 (Inst_counter3/o_f_not0001)
+     FDR:R                     1.026          Inst_counter3/o_f
+    ----------------------------------------
+    Total                      7.139ns (4.291ns logic, 2.848ns route)
+                                       (60.1% logic, 39.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'i_CLK'
+  Total number of paths / destination ports: 4 / 4
+-------------------------------------------------------------------------
+Offset:              7.165ns (Levels of Logic = 1)
+  Source:            Inst_counter3/o_f (FF)
+  Destination:       o_LED<3> (PAD)
+  Source Clock:      i_CLK rising 1.6X
+
+  Data Path: Inst_counter3/o_f to o_LED<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              1   0.720   0.801  Inst_counter3/o_f (Inst_counter3/o_f)
+     OBUF:I->O                 5.644          o_LED_3_OBUF (o_LED<3>)
+    ----------------------------------------
+    Total                      7.165ns (6.364ns logic, 0.801ns route)
+                                       (88.8% logic, 11.2% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 5.93 secs
+ 
+--> 
+
+Total memory usage is 4535512 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

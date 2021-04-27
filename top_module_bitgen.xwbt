@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=D:\books\darsi\7\az_cad\proj\main\top_module.ncd
+OUTFILE=D:\books\darsi\7\az_cad\proj\main\top_module.bit
+FAMILY=Spartan3
+PART=xc3s400-4pq208
+WORKINGDIR=D:\books\darsi\7\az_cad\proj\main
+LICENSE=WebPack
+USER_INFO=__0_0_0

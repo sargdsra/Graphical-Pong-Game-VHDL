@@ -1,0 +1,3 @@
+work	"counter.vhd"
+work	"my_dcm.vhd"
+work	"top_module.vhd"

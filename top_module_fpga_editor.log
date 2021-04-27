@@ -1,0 +1,17 @@
+#:C0     
+#Xilinx FPGA Editor Command Log File
+#Editor Version:
+#:V   NT M2.1 P.20131013
+#Current Working Directory:
+#:D   D:\books\darsi\7\az_cad\proj\main
+#Date/Time:
+#:T   Mon Oct 15 15:13:15 2018
+#------------------------------
+	#Reading top_module.ncd...
+	#Loading device for application Rf_Device from file '3s400.nph' in environment D:\Xilinx\14.7\ISE_DS\ISE\.
+	#   "top_module" is an NCD, version 3.2, device xc3s400, package pq208, speed -4
+	#Design creation date: 2018.10.13.08.34.52
+	#Building chip graphics...
+	#Loading speed info...
+	#1
+setattr main edit-mode no-logic-changes

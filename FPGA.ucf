@@ -1,0 +1,4 @@
+NET "i_CLK" LOC = P184;
+
+NET "i_RST" LOC = P72;
+NET "i_RST" PULLDOWN;

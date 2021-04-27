@@ -1,0 +1,4 @@
+vhdtdtfi -prj main -o D:/books/darsi/7/az_cad/proj/main/counter.vhi -module counter -template D:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work counter.vhd 
+vhdtdtfi -prj main -o D:/books/darsi/7/az_cad/proj/main/counter.vhi -module counter -template D:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work counter.vhd 
+vhdtdtfi -prj main -o D:/books/darsi/7/az_cad/proj/main/counter.vhi -module counter -template D:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work counter.vhd 
+vhdtdtfi -prj main -o D:/books/darsi/7/az_cad/proj/main/counter.vhi -module counter -template D:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work counter.vhd 
